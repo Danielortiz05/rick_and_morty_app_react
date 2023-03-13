@@ -1,6 +1,6 @@
 .cardContainer{
     display: grid;
-    grid-template-rows: 30px 1fr 40px;
+    grid-template-rows: 40px 1fr 40px;
     width: 300px;
     margin: auto;
     border: 1px solid rgba(0, 0, 0, 0.5);
@@ -10,7 +10,7 @@
 }
 
 .buttonContainer{
-    padding: 3px 4px;
+    padding: 6px 4px;
     display: flex;
     justify-content: flex-end;
 }
