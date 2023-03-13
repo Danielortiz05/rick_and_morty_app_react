@@ -1,0 +1,21 @@
+.searchBarContainer{
+    width: 26%;
+    margin: auto;
+    display: flex;
+}
+
+.searchBarInput{
+    border-radius: 4px;
+    border: 1px solid black;
+    width: 68%;
+}
+
+.searchBarButton{
+    background-color: rgb(56, 196, 56);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 8px;
+    font-weight: 800;
+    border-radius: 4px;
+    margin-left: 40px;
+}

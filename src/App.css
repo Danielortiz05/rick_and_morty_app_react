@@ -1,3 +1,14 @@
+
+  
+#root{
+   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://eloutput.com/wp-content/uploads/2021/01/Rick-morty-9-1024x536.jpg.webp);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   
+}
 .App {
    text-align: center;
+   font-family: 'Get Schwifty' ;
 }
+

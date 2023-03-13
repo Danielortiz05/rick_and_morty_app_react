@@ -1,4 +1,5 @@
-import Card from './Card';
+import Card from '../Card/Card';
+import styles from './Cards.module.css'
 
 export default function Cards({characters}) {
    const charactersItems = characters.map(({name, species, gender, image, onClose} )=>{
@@ -11,7 +12,7 @@ export default function Cards({characters}) {
             /> 
    })
    return (
-      <div>
+      <div className={styles.cardsContainer}>
          {charactersItems}
       </div>
    );
