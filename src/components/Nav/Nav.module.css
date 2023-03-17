@@ -1,0 +1,11 @@
+.nav{
+    width: 100%;
+    background-color: rgba(40, 68, 68, 0.9  );
+    border-radius: 8px;
+    height: 80px;
+    border: 1px solid rgba(55, 133, 34, 0.5);
+    box-shadow: 0 0 8px #378522;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
