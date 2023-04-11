@@ -36,6 +36,13 @@
     padding-left: 4px;
 }
 
+.formContainer .errorsMessage{
+    margin: 2px 0 0 0;
+    color: rgb(87, 4, 4);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
 .formButton{
     color: white;
     font-size: 1.2rem;

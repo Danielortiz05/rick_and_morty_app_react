@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState} from "react";
 import validation from "./validation";
+import validationPass from "./validationPass";
 import styles from "./Form.module.css"
 
-export default function Form (){
+export default function Form ({login}){
 
     const [userData, setUserData] = useState({
         username:"", 
@@ -19,19 +20,30 @@ export default function Form (){
         validation({...userData,[event.target.name]:valueInput}, errors, setErrors);
     }
 
+    function handleInputChangePass(event){
+        const valueInput = event.target.value;
+        setUserData({...userData,[event.target.name]:valueInput});
+        validationPass({...userData,[event.target.name]:valueInput}, errors, setErrors);
+    }
+
+    function handleSubmit(event){
+        event.preventDefault();
+        login(userData);
+    }
+
     return (
-        <form className={styles.formContainer}>
+        <form className={styles.formContainer} onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="username">Username: </label>
                 <input type="text" name="username" placeholder="Username" value={userData.username} onChange={handleInputChange} />
-                <p>{errors.username}</p>
+                <p className={styles.errorsMessage}>{errors.username}</p>
             </div>
             <div>
                 <label htmlFor="password">Password: </label>
-                <input type="password" name="password" placeholder="Password"  value={userData.password} onChange={handleInputChange}/>
-                <p>{errors.password}</p>
+                <input type="password" name="password" placeholder="Password"  value={userData.password} onChange={handleInputChangePass}/>
+                <p className={styles.errorsMessage}>{errors.password}</p>
             </div>
-            <button className={styles.formButton}>Ingresar</button>
+            <button className={styles.formButton} >Ingresar</button>
         </form>
     );
 }
